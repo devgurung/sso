@@ -35,11 +35,11 @@ The below diagram nicely summarizes the authorization code flow that we have imp
 
  
 
-https://{sso_server}/as/authorization.oauth2?
+```https://{sso_server}/as/authorization.oauth2?
 client_id=a29999-MyApp&
 response_type=code&
 scope=openid%20profile&
-redirect_uri=https://slack.com/redirecturi
+redirect_uri=https://slack.com/redirecturi```
 
  
 Note: redirect_uri that are being passed should exactly match with what you had given while registering the application with Keycloak server or else Keycloak server will throw "Invalid redirect_url" error.
@@ -66,7 +66,7 @@ Note: redirect_uri that are being passed should exactly match with what you had 
 
  
 
-https://{sso_Server}/as/token.oauth2
+```https://{sso_Server}/as/token.oauth2```
 
                 Step 8.   Finally, the auth server presents the access token and requests resources.  
 
@@ -76,7 +76,7 @@ https://{sso_Server}/as/token.oauth2
 
  
 
-https://{sso_server}/idp/userinfo.openid?access_token={access_token}
+```https://{sso_server}/idp/userinfo.openid?access_token={access_token}```
 
 
 Note - All applications integrating with eSSO need to support HTTPS for the OAuth calls.
