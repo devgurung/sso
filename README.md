@@ -3,7 +3,7 @@ The first thing that we need to do is to decide the SSO protocol that you want t
 Now that you are done with the first step, let's go ahead and register your application with the authentication provider which in this case is eSSO using the link.
 
  
-
+![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/pastedImage_2.png)
  
 
     There are totally five mandatory fields that need to be filled with the details.
