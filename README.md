@@ -78,4 +78,4 @@ Note: redirect_uri that are being passed should exactly match with what you had 
     https://{sso_server}/idp/userinfo.openid?access_token={access_token}
 
 
-Note - All applications integrating with eSSO need to support HTTPS for the OAuth calls.
+**Note - All applications integrating with eSSO need to support HTTPS for the OAuth calls.**
