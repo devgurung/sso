@@ -34,12 +34,11 @@ The below diagram nicely summarizes the authorization code flow that we have imp
             Step 2.  The first time the user tries to access the slack web page, the app makes an authorization request to Service's authorization endpoint with the following details 
 
  
-
-```https://{sso_server}/as/authorization.oauth2?
-client_id=a29999-MyApp&
-response_type=code&
-scope=openid%20profile&
-redirect_uri=https://slack.com/redirecturi```
+    https://{sso_server}/as/authorization.oauth2?
+    client_id=a29999-MyApp&
+    response_type=code&
+    scope=openid%20profile&
+    redirect_uri=https://slack.com/redirecturi
 
  
 Note: redirect_uri that are being passed should exactly match with what you had given while registering the application with Keycloak server or else Keycloak server will throw "Invalid redirect_url" error.
@@ -66,7 +65,7 @@ Note: redirect_uri that are being passed should exactly match with what you had 
 
  
 
-```https://{sso_Server}/as/token.oauth2```
+    https://{sso_Server}/as/token.oauth2
 
                 Step 8.   Finally, the auth server presents the access token and requests resources.  
 
@@ -76,7 +75,7 @@ Note: redirect_uri that are being passed should exactly match with what you had 
 
  
 
-```https://{sso_server}/idp/userinfo.openid?access_token={access_token}```
+    https://{sso_server}/idp/userinfo.openid?access_token={access_token}
 
 
 Note - All applications integrating with eSSO need to support HTTPS for the OAuth calls.
