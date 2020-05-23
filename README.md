@@ -1,10 +1,6 @@
-    The first thing that we need to do is to decide the SSO protocol that you want to use for the application. There are multiple protocols supported by eSSO, one of the most common and recommended protocol is Open-ID connect which again supports various flows. Since BermudaDIY is a web application that runs on a Web Server, we have selected "authorization_code" as the Oauth flow for user authentication. Below diagram greatly helps you in deciding the grant type for your application.
+The first thing that we need to do is to decide the SSO protocol that you want to use for the application. There are multiple protocols supported by eSSO, one of the most common and recommended protocol is Open-ID connect which again supports various flows. Since BermudaDIY is a web application that runs on a Web Server, we have selected "authorization_code" as the Oauth flow for user authentication.
 
- 
-
- 
-
-    Now that you are done with the first step, let's go ahead and register your application with the authentication provider which in this case is eSSO using the link.
+Now that you are done with the first step, let's go ahead and register your application with the authentication provider which in this case is eSSO using the link.
 
  
 
