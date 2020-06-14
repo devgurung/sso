@@ -60,7 +60,7 @@ Now that Configuration is all set from HyperSign side, lets go ahead and configu
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/hyerpsign_login.PNG)
    	 - Click on "login with HyperSign" and you will be presented with a qr code challenge that can be solved by using HyperSign mobile app.
 	 
-[Image of Yaktocat](https://github.com/devgurung/sso/blob/master/qrcode.PNG)
+   ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/qrcode.PNG)
 
 
 
