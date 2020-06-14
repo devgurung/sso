@@ -17,7 +17,7 @@ In case you need to learn more about SAML 2.0, please go [here](https://gravitat
 
 The below diagram nicely summaries all the transactions happen between Slack and HyperSign.
 
-![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/saml_tran.png)
+![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/SAML_tran.png)
 
 Let us now see how HyperSign and Slack need to be configured for SAML authentication to work.
 
