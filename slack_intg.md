@@ -83,8 +83,10 @@ Now that Configuration is all set from the HyperSign side, let's go ahead and co
     
      
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/slack_config.PNG)
+   
      
 	 - Now go to the Slack URL on the login page and click on the "Sign in with HyperSign" button.
+	 
 
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/hyerpsign_login.PNG)   
     
@@ -92,5 +94,6 @@ Now that Configuration is all set from the HyperSign side, let's go ahead and co
 For more information on the HyperSign mobile app, please go [here](http://hypermine.in/hypersign).
 
 ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/qrcode.PNG)
+
 
 Voila! Slack is now successfully integrated with HyperSign SSO. Next time when you have to log in to your Slack account, all you have to do is to scan the QR code and you are all set to rock and roll without having to worry about maintaining and remembering the username and password.
