@@ -84,6 +84,8 @@ Now that Configuration is all set from the HyperSign side, let's go ahead and co
      
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/slack_config.PNG)
      
+	 - Now go to the Slack URL on the login page and click on the "Sign in with HyperSign" button.
+
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/hyerpsign_login.PNG)   
     
      - Click on "login with HyperSign" and you will be presented with a QR code challenge. Now that you see the QR code, you can scan it and authenticate it using HyperSign mobile app.
