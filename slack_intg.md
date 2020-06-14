@@ -57,9 +57,10 @@ Now that Configuration is all set from HyperSign side, lets go ahead and configu
 	 - Keep Settings as it is.
 	 - Finally you can customize the sign in button using "Customize" option.
 	 - Clicking on Save configuration button will take you to HyperSign login page to test the integration.
-	 - Please make sure that you are logging into the HyperSign as a user with Email address attribute.
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/hyerpsign_login.PNG)
-
+   	 - Click on "login with HyperSign" and you will be presented with a qr code challenge that can be solved by using HyperSign mobile app.
+	 
+[Image of Yaktocat](https://github.com/devgurung/sso/blob/master/qrcode.PNG)
 
 
 
