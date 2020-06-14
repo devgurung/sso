@@ -67,24 +67,22 @@ Now that Configuration is all set from the HyperSign side, let's go ahead and co
  - Go to the Settings and Permissions 
  - Click on the authentication tab and then go to SSO configuration.
  - Click on the custom SAML 2.0 options and perform the following operations.
-     - Set SAML 2.0 Endpoint (HTTP) to https://www.hsauth.hypermine.in/keycloak/auth/realms/master/protocol/saml. (This is available in the SAML metadata that we downloaded in the previous step)
-     - Set Identity Provider Issuer to https://www.hsauth.hypermine.in/keycloak/auth/realms/master.(This is available in the SAML metadata that we downloaded in the previous step)
-     - Set Public Certificate by reading x.509 Certificate from the downloaded SAML metadata.
+     - Set SAML 2.0 Endpoint (HTTP) to https://www.hsauth.hypermine.in/keycloak/auth/realms/master/protocol/saml. (This is available in the SAML XML metadata that we downloaded in the previous step inside the **SingleSignOnService** "*Location*" attribute )
+     - Set Identity Provider Issuer to https://www.hsauth.hypermine.in/keycloak/auth/realms/master.(This is available in the SAML metadata that we downloaded in the previous step inside the **EntityDescriptor** "*entityID*" attribute )
+     - Set Public Certificate by copying it from "**dsig:X509Certificate**" tag.
      - Under advanced settings select both "Responses Signed" and "Assertions Signed".
      - Keep Settings options as it is.
      - Finally, you can customize the sign-in button using the "Customize" option.
      - Clicking on the Save configuration button will take you to the HyperSign login page to test the integration.
      
+   ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/slack_config.PNG)
+     
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/hyerpsign_login.PNG)
    
-        - Click on "login with HyperSign" and you will be presented with a QR code challenge that can be solved by using HyperSign mobile app.
-     
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/qrcode.PNG)
-   
-Voila!! All set to login to Slack by using HyperSign SSO.
+    
+     - Click on "login with HyperSign" and you will be presented with a QR code challenge. Now that you see the QR code, you can scan it and authenticate it using HyperSign mobile app.
+For more information on the HyperSign mobile app, please go [here](http://hypermine.in/hypersign).
 
-
-
-
-
+Voila! Slack is now successfully integrated with HyperSign SSO. Next time when you have to log in to your Slack account, all you have to do is to scan the QR code and you are all set to rock and roll without having to worry about maintaining and remembering the username and password.
 
