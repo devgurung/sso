@@ -6,12 +6,17 @@ Before we see what exactly we need to do to integrate Slack with HyperSign SSO, 
 
 
 **SAML2.0**
+
 Security Assertion Markup Language (SAML) is an open standard that allows identity providers (in this case its [HyperSign](https://hypermine.in/hypersign/)) to pass authorization credentials to service providers (like Slack, office 365, salesforce etc), and with that ,using single Identity provider, a user can login to multiple websites without having to maintain multiple credentials.
 
 So in our case when a user logs into Slack, it requests authorization from the HyperSign. HyperSign authenticates the user’s credentials by asking user to solve QR Code challenge using the HyperSign authenticator and then returns the authorization and user's attributes(like email address, first name, last name etc.) back to Slack, and the user is now able to use the Slack.All this is possible because both of those systems speaks the same language - SAML 2.0. 
 
 As we can see, one of the main advantage of SAML adoption is that it allows us  to use software as a service (SaaS) solutions while maintaining a single secure federated identity management system.
 Now in order for SAML authentication to work, HyperSign and Slack need to agree upon the exact configuration of SAML.
+In case you need to learn more about SAML 2.0, please go [here](https://gravitational.com/blog/how-saml-authentication-works/) and read more about SAML 2.0.
+The below diagram nicely summaries all the transactions happens between Slack and HyperSign.
+
+![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/saml_tran.png
 
 Let us now see how HyperSign and Slack needs to be configured for SAML authentication to work.
 
@@ -32,11 +37,12 @@ First you need to login to HyperSign Admin console.
 	 - Set “Valid Redirect UIs” to 2 values
 		 - https://[your-slack-url]/
 		 - https://[your-slack-url]/*
-	 - Set “Assertion Consumer Service POST Binding URL” to “https://[your-slack-url]/sso/saml”
+	 - Set “Assertion Consumer Service POST Binding URL” to “https://[your-slack-url]/sso/saml” -This is the Slack end point where all the responses will be sent using POST method.
 	 - Set “Logout Service POST Binding URL” to “https://[your-slack-url]/sso/saml/logout”
-	 - The value of [your-slack-url] is the actual slack URL for your account, for example homelogin.slack.com
+	 - The value of [your-slack-url] is the actual slack URL for your account, for example hypershq.slack.com/
 	 
 ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/HyperSign.PNG)
+
  - Mapper configuration -Mappers are nothing but SAML Assertion.Its the XML document that the identity provider sends to the service provider that contains information like authentication, attribute(email , first name etc.), and authorization (roles etc.) decision.For Slack to work with HyperSign, we need to configure mapper as follows.
  
 	 - Click the “Add Builtin” button .
@@ -49,7 +55,7 @@ First you need to login to HyperSign Admin console.
 	 
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/single_role.PNG)
    
- - Next go to the installation tab and select the Format Option “SAML Metadata IDPSSODescriptor”. This XML document has valuable settings which we will need while configuring slack.
+ - Next go to the installation tab and select the Format Option “SAML Metadata IDPSSODescriptor”. This XML document has all the information that you need in the next step.
  
  ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/installtion.PNG)
 
@@ -64,7 +70,7 @@ Now that Configuration is all set from HyperSign side, lets go ahead and configu
 	 - Set Identity Provider Issuer to https://www.hsauth.hypermine.in/keycloak/auth/realms/master.(This is available in the SAML metadata that we downloaded in the previous step)
 	 - Set Public Certificate by reading x.509 Certificate from the downloaded SAML metadata.
 	 - Under advanced setting select both "Responses Signed" and "Assertions Signed".
-	 - Keep Settings as it is.
+	 - Keep Settings options as it is.
 	 - Finally you can customize the sign in button using "Customize" option.
 	 - Clicking on Save configuration button will take you to HyperSign login page to test the integration.
 	 
@@ -73,6 +79,9 @@ Now that Configuration is all set from HyperSign side, lets go ahead and configu
    	 - Click on "login with HyperSign" and you will be presented with a qr code challenge that can be solved by using HyperSign mobile app.
 	 
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/qrcode.PNG)
+   
+Voila!! You are all set to login to Slack by using HyperSign SSO.
+
 
 
 
