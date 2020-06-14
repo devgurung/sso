@@ -42,6 +42,7 @@ First you need to login to HyperSign Admin console.
 	 - Next, Slack expects only one role in the response, so in order to make sure HyperSign sends only one role back to Slack, go to the client scope and select "Role_list" , then select "mappers" tab and then again select "role_list" and make sure that "Single Role Attribute" is set to ON.
    ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/single_role.PNG)
  - Next go to the installation tab and select the Format Option “SAML Metadata IDPSSODescriptor”. This XML document has valuable settings which we will need while configuring slack.
+ ![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/installtion.PNG)
 
 **Slack Configuration**
 Now that Configuration is all set from HyperSign side, lets go ahead and configure Slack.In order to perform the following operations, you need to be a slack admin.
