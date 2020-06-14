@@ -14,9 +14,10 @@ So in our case when a user logs into Slack, it requests authorization from the H
 As we can see, one of the main advantage of SAML adoption is that it allows us  to use software as a service (SaaS) solutions while maintaining a single secure federated identity management system.
 Now in order for SAML authentication to work, HyperSign and Slack need to agree upon the exact configuration of SAML.
 In case you need to learn more about SAML 2.0, please go [here](https://gravitational.com/blog/how-saml-authentication-works/) and read more about SAML 2.0.
+
 The below diagram nicely summaries all the transactions happens between Slack and HyperSign.
 
-![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/saml_tran.png
+![Image of Yaktocat](https://github.com/devgurung/sso/blob/master/saml_tran.png)
 
 Let us now see how HyperSign and Slack needs to be configured for SAML authentication to work.
 
